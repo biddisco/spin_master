@@ -31,7 +31,6 @@ cmake_minimum_required(VERSION 2.8)
 # load script for checking out projects from git
 #--------------------------------------------------
 include(${CMAKE_CURRENT_SOURCE_DIR}/CMake/GitExternal.cmake)
-set(GIT_EXTERNAL_DISABLE_UPDATE ON)
 
 #--------------------------------------------------
 # load add_subproject macro 
@@ -44,7 +43,7 @@ include(${CMAKE_CURRENT_SOURCE_DIR}/CMake/SubProject.cmake)
 Git_External(
   ${CMAKE_CURRENT_SOURCE_DIR}/hpx
   https://github.com/biddisco/hpx.git
-  fixing_1617
+  master
   NO_UPDATE
   VERBOSE
 )
@@ -83,9 +82,13 @@ set(HPX_WITH_TESTING OFF CACHE BOOL "" FORCE)
 set(HPX_WITH_TESTS OFF CACHE BOOL "" FORCE)
 set(HPX_WITH_EXAMPLES OFF CACHE BOOL "")
 
+#set(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} "-std=c++11")
+#set(CMAKE_FIND_DEBUG_MODE 1)
+
 #--------------------------------------------------
 # Add the subprojects to our project
 # args are : project name in subproject, path from here
 #--------------------------------------------------
 add_subproject(hpx               hpx)
 add_subproject(spin_glass_solver spin_glass_solver)
+#add_subproject(exa_2015 the_constructor)
