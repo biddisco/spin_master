@@ -89,6 +89,6 @@ set(HPX_WITH_EXAMPLES OFF CACHE BOOL "")
 # Add the subprojects to our project
 # args are : project name in subproject, path from here
 #--------------------------------------------------
-add_subproject(hpx               hpx)
+add_subproject(HPX               hpx)
 add_subproject(spin_glass_solver spin_glass_solver)
 #add_subproject(exa_2015 the_constructor)
