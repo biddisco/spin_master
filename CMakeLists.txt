@@ -77,10 +77,11 @@ SET (CMAKE_ARCHIVE_OUTPUT_DIRECTORY
 #--------------------------------------------------
 # Custom setting for me to save some time, 
 #--------------------------------------------------
-set(BUILD_TESTING OFF CACHE BOOL "" FORCE)
-set(HPX_WITH_TESTING OFF CACHE BOOL "" FORCE)
-set(HPX_WITH_TESTS OFF CACHE BOOL "" FORCE)
-set(HPX_WITH_EXAMPLES OFF CACHE BOOL "")
+set(BUILD_TESTING                  OFF CACHE BOOL "" FORCE)
+set(HPX_WITH_TESTING               OFF CACHE BOOL "" FORCE)
+set(HPX_WITH_TESTS                 OFF CACHE BOOL "" FORCE)
+set(HPX_WITH_EXAMPLES              OFF CACHE BOOL "" FORCE)
+set(HPX_WITH_THREAD_IDLE_RATES     ON  CACHE BOOL "" FORCE)
 
 #set(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} "-std=c++11")
 #set(CMAKE_FIND_DEBUG_MODE 1)
