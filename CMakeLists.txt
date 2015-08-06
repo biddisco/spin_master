@@ -74,6 +74,9 @@ SET (CMAKE_ARCHIVE_OUTPUT_DIRECTORY
     ${PROJECT_BINARY_DIR}/bin CACHE PATH "Single Directory for all static libraries."
 )
 
+set(CMAKE_FIND_PACKAGE_NO_PACKAGE_REGISTRY 1)
+set(CMAKE_FIND_PACKAGE_NO_SYSTEM_PACKAGE_REGISTRY 1)
+
 #--------------------------------------------------
 # Custom setting for me to save some time, 
 #--------------------------------------------------
